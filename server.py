@@ -12,7 +12,7 @@ def add():
     data=request.json
     fn = data.get('firstNumber',0)
     sn = data.get('secondNumber',0) 
-    return fn+sn,200
+    return jsonify({fn+sn}),200
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
